@@ -14,7 +14,11 @@ function App() {
       const coordenadas={lat:pos.coords.latitude, lon:pos.coords.longitude }
       setcoords(coordenadas)
     }
-    navigator.geolocation.getCurrentPosition(success);
+
+    const error=err=> {
+      console.warn(`ERROR(${err.code}): ${err.message}`);
+    }
+    navigator.geolocation.getCurrentPosition(success,error);
 
   },[])
 
