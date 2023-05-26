@@ -1,0 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.targeta{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.targeta1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  min-width: 220px;
+  max-width: 600px;
+  background-color:rgba(201, 202, 211,0.6);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  
+}
+
+.name{
+  text-align: center;
+}
+.datos{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+
+}
+.datos1{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.temp{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+.targeta1 button{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+body{
+  background-image: url('../imagenes/despejado.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media(max-width:384px){
+
+  .datos{
+   
+    flex-direction: column;
+  
+  }
+  
+}
