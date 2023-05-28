@@ -26,9 +26,9 @@ export const DatosClima = ({clima}) => {
             <div className='datos_img'> <img src={clima ?`https://openweathermap.org/img/wn/${clima.weather[0].icon}@2x.png`:""} alt="" /></div>
             <div className='datos1'>
             <b>❝ {comienza_mayus(clima?.weather[0].description)} ❞</b>
-            <span>Wind Speed &nbsp;&nbsp;<b>{((clima?.wind.speed)*3.6).toFixed(1)} km/h</b></span>
-            <span>Clouds &nbsp;&nbsp;<b>{clima?.clouds.all}%</b></span>
-            <span>Pressure &nbsp;&nbsp;<b> {clima?.main.pressure} hPa</b></span>
+            <span>Wind Speed <b>{((clima?.wind.speed)*3.6).toFixed(1)} km/h</b></span>
+            <span>Clouds<b>{clima?.clouds.all}%</b></span>
+            <span>Pressure<b> {clima?.main.pressure} hPa</b></span>
             </div>
 
         </div>
