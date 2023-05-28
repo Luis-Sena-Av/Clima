@@ -6,6 +6,10 @@ export const DatosClima = ({clima}) => {
     const handlescale=()=>{
         setscale(!scale)
     }
+
+    function comienza_mayus(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      }
    
     
 
@@ -21,10 +25,10 @@ export const DatosClima = ({clima}) => {
 
             <div className='datos_img'> <img src={clima ?`https://openweathermap.org/img/wn/${clima.weather[0].icon}@2x.png`:""} alt="" /></div>
             <div className='datos1'>
-            <b>"{clima?.weather[0].description}"</b>
-            <span>Wind Speed<b>  {((clima?.wind.speed)*3.6).toFixed(1)} km/h</b></span>
-            <span>Clouds<b>    {clima?.clouds.all}%</b></span>
-            <span>Pressure<b>   {clima?.main.pressure} hPa</b></span>
+            <b>❝ {comienza_mayus(clima?.weather[0].description)} ❞</b>
+            <span>Wind Speed &nbsp;&nbsp;<b>{((clima?.wind.speed)*3.6).toFixed(1)} km/h</b></span>
+            <span>Clouds &nbsp;&nbsp;<b>{clima?.clouds.all}%</b></span>
+            <span>Pressure &nbsp;&nbsp;<b> {clima?.main.pressure} hPa</b></span>
             </div>
 
         </div>
