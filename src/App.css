@@ -97,14 +97,15 @@
 .load{
   width: 300px;
   height: 300px;
-  border: 5px solid greenyellow;
+  border: 10px solid greenyellow;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   padding: 1rem;
   border-right-color: darkblue ;
-  animation: rotar 0.75s ease infinite;
+  border-left-color: darkblue;
+  animation: rotar 2s ease infinite;
   grid-row: 1/2;
   grid-column: 1/2;
 }
@@ -112,7 +113,7 @@
   grid-row: 1/2;
   grid-column: 1/2;
   animation: opac 1s ease infinite;
-  color: yellow;
+  color: black;
 }
 
 .loading{
