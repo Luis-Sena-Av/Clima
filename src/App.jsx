@@ -72,7 +72,7 @@ function App() {
     break;
 
     default:
-       fondo='url(../imagenes/despejado.jpg)'
+       fondo='url(../imagenes/fondo1.png)'
     break;
       
   }

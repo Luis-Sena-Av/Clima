@@ -23,7 +23,7 @@
   border-radius: 1rem;
   min-width: 220px;
   max-width: 600px;
-  background-color:rgba(201, 202, 211,0.3);
+  background-color:rgba(201, 202, 211,0.8);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   
 }
@@ -73,6 +73,7 @@
   grid-row: 1/2;
   grid-column: 1/2;
   animation: opac 1s ease infinite;
+  color: yellow;
 }
 
 .loading{
@@ -91,6 +92,31 @@
 .subtitle{
   font-size: 1rem;
   font-weight: 400;
+}
+
+.temp button{
+  background-color: rgba(0, 50,255, 0.8);
+  border: none;
+  color:white;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+}
+.temp button:focus{
+  border: none;
+  margin: 0;
+  outline-style: none;
+}
+.temp button:active{
+  animation: tam 0.5s ease ;
+}
+
+@keyframes tam{
+  0%{
+    transform: scale(0.9);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 
 @keyframes rotar{
