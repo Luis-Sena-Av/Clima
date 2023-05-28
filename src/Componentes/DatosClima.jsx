@@ -19,7 +19,7 @@ export const DatosClima = ({clima}) => {
 
         <div className='datos'>
 
-            <div > <img src={clima ?`https://openweathermap.org/img/wn/${clima.weather[0].icon}@2x.png`:""} alt="" /></div>
+            <div className='datos_img'> <img src={clima ?`https://openweathermap.org/img/wn/${clima.weather[0].icon}@2x.png`:""} alt="" /></div>
             <div className='datos1'>
             <b>"{clima?.weather[0].description}"</b>
             <span>Wind Speed<b>  {((clima?.wind.speed)*3.6).toFixed(1)} km/h</b></span>
