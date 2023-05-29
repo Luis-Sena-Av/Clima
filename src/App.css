@@ -9,11 +9,11 @@
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: 0 auto;
   flex-direction: column;
   gap: 3rem;
   position: fixed;
+  top: 2rem;
   
 }
 
