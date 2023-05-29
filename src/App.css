@@ -11,6 +11,8 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  flex-direction: column;
+  gap: 3rem;
   
 }
 
@@ -152,6 +154,27 @@
   animation: tam 0.5s ease ;
   opacity: 0.8;
   background-color: darkblue;
+}
+
+form{
+  display: flex;
+  gap: 1rem;
+}
+input{
+  padding: 0.2rem;
+  border-radius: 8px;
+  font-family: 'El Messiri', sans-serif;
+  font-size: 1rem;
+
+}
+.buscar{
+  background-color: rebeccapurple;
+  color: white;
+  cursor: pointer;
+}
+
+input:focus{
+  outline: none;
 }
 
 @keyframes moving{

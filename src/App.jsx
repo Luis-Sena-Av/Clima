@@ -6,7 +6,7 @@ import { DatosClima } from './Componentes/DatosClima'
 function App() {
   const [coords, setcoords] = useState()
   const [clima, setclima] = useState()
-  const [mostrar, setmostrar] = useState("undefined")
+  const [city, setcity] = useState()
   
 
   useEffect(()=>{
@@ -77,9 +77,16 @@ function App() {
       
   }
 
+  useEffect(()=>{
 
+    if(city){
+      axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0270b10b74d6de744844699edc1e2d25`)
+      .then(res=>{setclima(res.data)})
+      .catch(err=>console.log(err))
+    }
 
-  
+  },[city])
+
 
   const estilo={
     backgroundImage:fondo,
@@ -87,19 +94,26 @@ function App() {
     backgroundRepeat: 'no-repeat',
     height:'100vh'
   }
+
+  const handleCity=(e)=>{
+    e.preventDefault()
+    setcity(e.target.entrar.value.trim())
+    e.target.entrar.value=""
+  }
   
-
-
   return (
-    
     
     <div className='targeta' style={estilo}>
 
+      <form  onSubmit={handleCity}>
+        <input type="text" id='entrar'/>
+        <input className='buscar' type="submit" value="search"/>
+      </form>
+      
       {clima? <DatosClima clima={clima}/> : <div className='loading'> <div className='load'></div><h1 className='text'>Loading</h1></div>  }
        
     </div>
       
-    
   )
 }
 
