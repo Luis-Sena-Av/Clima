@@ -13,7 +13,8 @@
   flex-direction: column;
   gap: 3rem;
   position: fixed;
-  top: 2rem;
+  top: 0rem;
+  padding-top: 2rem;
   
 }
 

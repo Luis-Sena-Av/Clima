@@ -92,7 +92,7 @@ function App() {
     backgroundImage:fondo,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    height:'100vh'
+    height:'100vh',
   }
 
   const handleCity=(e)=>{
