@@ -7,19 +7,21 @@ function App() {
   const [coords, setcoords] = useState()
   const [clima, setclima] = useState()
   const [city, setcity] = useState()
-  
-
+  const [mostrar, setmostrar] = useState(false)
+  const [mensError, setmensError] = useState("")
   useEffect(()=>{
     
     const success= pos=>{
       const coordenadas={lat:pos.coords.latitude, lon:pos.coords.longitude }
       setcoords(coordenadas)
+      setmostrar(true)
      
     }
 
     const error=err=> {
       console.warn(`ERROR(${err.code}): ${err.message}`);
-     
+      setmostrar(false)
+      setmensError(`ERROR(${err.code}): ${err.message}`)
     }
     navigator.geolocation.getCurrentPosition(success,error);
 
@@ -103,14 +105,15 @@ function App() {
   
   return (
     
-    <div className='targeta' style={estilo}>
-
-      <form  onSubmit={handleCity}>
+    <div  className='targeta' style={estilo}>
+      
+      
+    
+      {mostrar? clima?   <div className='targeta'><form  onSubmit={handleCity}>
         <input type="text" id='entrar'/>
         <input className='buscar' type="submit" value="search"/>
-      </form>
+      </form>    <DatosClima clima={clima}/></div>   : <div className='loading'> <div className='load'></div><h1 className='text'>Loading</h1></div>:<div className='local'><img src="../imagenes/localizacion.jpg" alt="localizar" /> {mensError}</div>  }     
       
-      {clima? <DatosClima clima={clima}/> : <div className='loading'> <div className='load'></div><h1 className='text'>Loading</h1></div>  }
        
     </div>
       
