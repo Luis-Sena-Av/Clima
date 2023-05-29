@@ -13,6 +13,7 @@
   margin: 0 auto;
   flex-direction: column;
   gap: 3rem;
+  position: fixed;
   
 }
 
